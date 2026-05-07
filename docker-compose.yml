@@ -8,7 +8,7 @@ x-db-environment: &db-env
 services:
   db:
     container_name: crypto-masivos-db
-    image: postgres:latest
+    image: postgres:16
     environment:
       <<: *db-env
     ports:

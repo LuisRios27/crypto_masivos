@@ -203,12 +203,11 @@ export function createAddFundsDialog(onClose) {
 				const alias = aliasInput.value.trim();
 
 				const createResult = await createWallet({
-					user_id: 1, // This will be validated by backend auth middleware
-					address: `wallet_${Date.now()}_${Math.random()
-						.toString(36)
-						.slice(2, 11)}`,
-					alias: alias,
-					currency_id: currencyId,
+    				address: `wallet_${Date.now()}_${Math.random()
+    				    .toString(36)
+    				    .slice(2, 11)}`,
+    				alias: alias,
+    				currency_id: currencyId,
 				});
 
 				if (createResult.success) {
